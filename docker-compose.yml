@@ -1,0 +1,27 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    image: next-tamagui-template-development
+    container_name: next-tamagui-template-development
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
+    environment:
+      - NODE_ENV=development
+    platform: linux/amd64
+
+  prod:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: next-tamagui-template-production
+    container_name: next-tamagui-template-production
+    ports:
+      - "3000:3000"
+    environment:
+      - NODE_ENV=production
+    platform: linux/amd64
