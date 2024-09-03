@@ -16,7 +16,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ backgroundColor: "#00000" }}>
+      <body style={{ backgroundColor: "#ffffff" }}>
         <NextTamaguiProvider>{children}</NextTamaguiProvider>
       </body>
     </html>
